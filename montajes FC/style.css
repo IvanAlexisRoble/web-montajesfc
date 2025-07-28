@@ -39,9 +39,8 @@ body {
     width: auto;
 }
 
-/* ESTILOS DEL MENÚ PARA ESCRITORIO */
 .main-nav {
-    display: block; /* Visible en escritorio */
+    display: block;
 }
 
 .main-nav ul {
@@ -66,9 +65,8 @@ body {
     color: #007BFF;
 }
 
-/* ESTILOS DEL BOTÓN HAMBURGUESA */
 .menu-toggle {
-    display: none; /* Oculto por defecto en escritorio */
+    display: none;
     background: none;
     border: none;
     cursor: pointer;
@@ -85,7 +83,6 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-/* ... RESTO DE ESTILOS ... */
 
 /* --- SECCIÓN HERO CON IMAGEN DE FONDO --- */
 .hero-section {
@@ -342,15 +339,19 @@ body {
 
 /* --- ADAPTACIÓN A MÓVILES (Media Queries) --- */
 @media (max-width: 850px) {
-    /* Mostramos el botón hamburguesa y ocultamos el menú normal */
+    /* ==== AJUSTES EN LA CABECERA PARA MÓVIL ==== */
+    .logo img {
+        height: 60px; /* Hacemos el logo un poco más pequeño en móvil */
+    }
+
     .menu-toggle {
-        display: block;
+        display: block; /* Mostramos el botón hamburguesa */
     }
 
     .main-nav {
         display: none; /* OCULTAMOS EL MENÚ DE ESCRITORIO POR DEFECTO */
         position: absolute;
-        top: 90px;
+        top: 84px; /* Ajustamos a la altura aproximada de la nueva cabecera */
         left: 0;
         width: 100%;
         background-color: #ffffff;
@@ -382,7 +383,7 @@ body {
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    /* Otros ajustes para móvil */
+    /* ==== OTROS AJUSTES PARA MÓVIL ==== */
     .about-container, .contact-info-form {
         flex-direction: column;
         grid-template-columns: 1fr;
