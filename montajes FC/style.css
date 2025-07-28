@@ -37,6 +37,7 @@ body {
 .logo img {
     height: 70px;
     width: auto;
+    display: block; /* Ayuda a evitar espacios fantasma */
 }
 
 .main-nav {
@@ -341,7 +342,8 @@ body {
 @media (max-width: 850px) {
     /* ==== AJUSTES EN LA CABECERA PARA MÓVIL ==== */
     .logo img {
-        height: 60px; /* Hacemos el logo un poco más pequeño en móvil */
+        height: 60px; 
+        max-width: 100%; /* El logo nunca será más ancho que su contenedor */
     }
 
     .menu-toggle {
@@ -349,9 +351,9 @@ body {
     }
 
     .main-nav {
-        display: none; /* OCULTAMOS EL MENÚ DE ESCRITORIO POR DEFECTO */
+        display: none; 
         position: absolute;
-        top: 84px; /* Ajustamos a la altura aproximada de la nueva cabecera */
+        top: 84px; 
         left: 0;
         width: 100%;
         background-color: #ffffff;
@@ -359,7 +361,7 @@ body {
     }
     
     .main-nav.is-active {
-        display: block; /* Lo mostramos cuando se hace clic */
+        display: block; 
     }
 
     .main-nav ul {
