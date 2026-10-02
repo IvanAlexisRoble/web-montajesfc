@@ -2,10 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menu-toggle');
     const mainNav = document.getElementById('main-nav');
 
-    if (menuToggle) {
+    if (menuToggle && mainNav) {
         menuToggle.addEventListener('click', () => {
-            mainNav.classList.toggle('is-active');
+            const isOpen = mainNav.classList.toggle('is-active');
             menuToggle.classList.toggle('is-active');
+            menuToggle.setAttribute('aria-expanded', isOpen);
         });
     }
 });
