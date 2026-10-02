@@ -87,7 +87,7 @@ body {
 
 /* --- SECCIÓN HERO CON IMAGEN DE FONDO --- */
 .hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/fondo.svg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/fondo.webp');
     background-size: cover;
     background-position: center;
     text-align: center;
